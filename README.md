@@ -31,6 +31,11 @@
 
 ---
 
+> [!IMPORTANT]
+> **Project Status:** This repository currently hosts the **Frontend Prototype**. Core backend services (Node.js, MongoDB, Socket.io) and AI features are currently in the development pipeline.
+
+---
+
 ## 🔴 The Problem & ✅ The Solution
 
 <p align="center">
@@ -110,17 +115,22 @@
 
 ```mermaid
 graph LR
-    A[Current] --> B[Global Search]
-    B --> C[Dark Mode]
-    C --> D[AI Summarizer]
-    D --> E[Mobile App]
+    A[Frontend Prototype] --> B[Backend Integration]
+    B --> C[Real-time Engine]
+    C --> D[AI Layer]
+    D --> E[Full Scale App]
     style A fill:#6366f1,stroke:#fff,stroke-width:2px,color:#fff
     style E fill:#a855f7,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
-- [ ] **AI Summarizer**: Auto-generate bullet points from long PDF notes.
-- [ ] **Smart OCR**: Convert handwritten images to searchable text.
-- [ ] **Doubt Solver Bot**: Integrated AI to answer questions based on notes.
+### 🛠️ Upcoming Core Modules
+- [ ] **Node.js/Express Backend**: Moving from static storage to a robust server-side architecture.
+- [ ] **MongoDB Database**: Persistent storage for user profiles, notes, and chat history.
+- [ ] **Socket.io Integration**: Powering real-time notifications and instant messaging.
+- [ ] **Advanced AI Suite**: 
+    - [ ] **AI Summarizer**: Auto-generate bullet points from long PDF notes.
+    - [ ] **Smart OCR**: Convert handwritten images to searchable text.
+    - [ ] **Doubt Solver Bot**: AI to answer questions based on notes.
 - [ ] **Night Owl Theme**: Optimized dark mode for late-night study sessions.
 
 ---
