@@ -108,7 +108,7 @@ NoteShare/
 
 ## 🛠️ Getting Started
 
-1. **Clone the repo:** `git clone https://github.com/yourusername/noteshare.git`
+1. **Clone the repo:** `git clone https://github.com/ayushtripathi-45/Note-Share.git`
 2. **Open `index.html`** in your browser.
 3. **Experience the magic!** ✨
 
