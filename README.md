@@ -113,14 +113,9 @@
 
 ## 🚀 Future Roadmap
 
-
-```mermaid
-flowchart LR
-    A["Frontend Prototype"] --> B["Backend Integration"]
-    B --> C["Real-time Engine"]
-    C --> D["AI Layer"]
-    D --> E["Full Scale App"]
-```
+<p align="center">
+  <img src="assets/roadmap.png" alt="NoteShare Roadmap" width="100%">
+</p>
 
 
 ### 🛠️ Upcoming Core Modules
