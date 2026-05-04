@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NoteShare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; background-color: #fcfcfc; }
+        .text-primary-custom { color: #6366f1; }
+        .bg-primary-custom { background-color: #6366f1; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .gradient-text { background: linear-gradient(135deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-slate-50 overflow-x-hidden">
+
+    <!-- Navbar (Standardized) -->
+    <nav class="bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4 flex justify-between items-center sticky top-0 z-50" data-aos="fade-down">
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="text-2xl font-bold text-primary-custom">NoteShare</a>
+            <a href="javascript:history.back()" class="text-gray-500 hover:text-primary-custom font-medium ml-4 transition flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Back
+            </a>
+        </div>
+        
+        <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+            <a href="dashboard.html" class="hover:text-primary-custom transition">Dashboard</a>
+            <a href="index.html#features" class="hover:text-primary-custom transition">Explore</a>
+            <a href="friends.html" class="hover:text-primary-custom transition">Friends</a>
+            <a href="chat.html" class="hover:text-primary-custom transition">Chat</a>
+            <a href="about.html" class="text-primary-custom border-b-2 border-primary-custom">About</a>
+        </div>
+
+        <div class="flex space-x-4">
+            <a href="auth.html" class="px-6 py-2 rounded-lg font-semibold text-primary-custom hover:bg-indigo-50 transition">Login</a>
+            <a href="auth.html" class="px-6 py-2 rounded-lg font-semibold text-white bg-primary-custom hover:opacity-90 transition shadow-lg shadow-indigo-200">Signup</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 py-20 text-center" data-aos="fade-up">
+        <h1 class="text-5xl md:text-7xl font-bold text-slate-800 mb-6">
+            Our Mission: <span class="gradient-text">Empower Learning</span>
+        </h1>
+        <p class="text-gray-500 text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
+            NoteShare was built by students, for students. We believe that knowledge should be shared, 
+            collaborated upon, and accessible to everyone, anywhere.
+        </p>
+        <div class="inline-block p-1 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-500 shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200" alt="Students studying" class="rounded-xl w-full max-w-4xl">
+        </div>
+    </section>
+
+    <!-- The Problem & Solution -->
+    <section class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-sm">The Problem</span>
+                <h2 class="text-4xl font-bold text-slate-800 mt-2 mb-6">Traditional Note Sharing is Broken</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start space-x-4">
+                        <div class="mt-1 bg-red-100 p-2 rounded-lg"><i class="fas fa-times text-red-500"></i></div>
+                        <p class="text-gray-600">Notes are scattered in WhatsApp groups and private drives.</p>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="mt-1 bg-red-100 p-2 rounded-lg"><i class="fas fa-times text-red-500"></i></div>
+                        <p class="text-gray-600">No way to verify the quality or accuracy of shared content.</p>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="mt-1 bg-red-100 p-2 rounded-lg"><i class="fas fa-times text-red-500"></i></div>
+                        <p class="text-gray-600">Missing a lecture often means losing vital information forever.</p>
+                    </li>
+                </ul>
+            </div>
+            <div data-aos="fade-left" class="bg-indigo-50 p-12 rounded-3xl border border-indigo-100">
+                <span class="text-primary-custom font-bold uppercase tracking-widest text-sm">The Solution</span>
+                <h2 class="text-4xl font-bold text-slate-800 mt-2 mb-6">NoteShare: The Student Social Network</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start space-x-4">
+                        <div class="mt-1 bg-green-100 p-2 rounded-lg"><i class="fas fa-check text-green-500"></i></div>
+                        <p class="text-gray-600">Centralized platform for all academic resources.</p>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="mt-1 bg-green-100 p-2 rounded-lg"><i class="fas fa-check text-green-500"></i></div>
+                        <p class="text-gray-600">AI-powered search to find exactly what you need in seconds.</p>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="mt-1 bg-green-100 p-2 rounded-lg"><i class="fas fa-check text-green-500"></i></div>
+                        <p class="text-gray-600">Built-in chat and collaboration tools for group study.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Developer -->
+    <section class="max-w-7xl mx-auto px-4 py-24 text-center">
+        <h2 class="text-4xl font-bold text-slate-800 mb-16" data-aos="fade-up">Meet the Creator</h2>
+        <div class="max-w-2xl mx-auto bg-white p-12 rounded-3xl shadow-2xl shadow-indigo-100 border border-gray-100" data-aos="zoom-in">
+            <div class="w-24 h-24 bg-primary-custom text-white rounded-full flex items-center justify-center font-bold text-3xl mx-auto mb-6 shadow-xl shadow-indigo-200">AT</div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-2">Ayush Tripathi</h3>
+            <p class="text-primary-custom font-medium mb-6">B.Tech CSE Student & Developer</p>
+            <p class="text-gray-500 mb-8 leading-relaxed">
+                "I built NoteShare because I saw the struggle of students firsthand. 
+                Our goal is to make sure no student ever feels left behind because 
+                they missed a class or couldn't find the right notes."
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-primary-custom transition text-2xl"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary-custom transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-primary-custom transition text-2xl"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <div class="text-3xl font-bold text-white mb-2">NoteShare</div>
+                <p class="text-gray-400">Making study easy, one note at a time.</p>
+            </div>
+            <div class="flex space-x-12">
+                <div class="space-y-4">
+                    <h4 class="font-bold">Platform</h4>
+                    <a href="dashboard.html" class="block text-gray-400 hover:text-white transition text-sm">Dashboard</a>
+                    <a href="friends.html" class="block text-gray-400 hover:text-white transition text-sm">Friends</a>
+                    <a href="chat.html" class="block text-gray-400 hover:text-white transition text-sm">Chat</a>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold">Legal</h4>
+                    <a href="#" class="block text-gray-400 hover:text-white transition text-sm">Privacy Policy</a>
+                    <a href="#" class="block text-gray-400 hover:text-white transition text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
+            &copy; 2026 NoteShare. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

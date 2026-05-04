@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup - NoteShare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .bg-primary-custom { background-color: #6366f1; }
+        .text-primary-custom { color: #6366f1; }
+    </style>
+</head>
+<body class="bg-indigo-50 min-h-screen overflow-x-hidden">
+
+    <!-- Navbar (Standardized) -->
+    <nav class="bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4 flex justify-between items-center sticky top-0 z-50 mb-12" data-aos="fade-down">
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="text-2xl font-bold text-primary-custom">NoteShare</a>
+            <a href="javascript:history.back()" class="text-gray-500 hover:text-primary-custom font-medium ml-4 transition flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Back
+            </a>
+        </div>
+        
+        <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+            <a href="dashboard.html" class="hover:text-primary-custom transition">Dashboard</a>
+            <a href="index.html#features" class="hover:text-primary-custom transition">Explore</a>
+            <a href="friends.html" class="hover:text-primary-custom transition">Friends</a>
+            <a href="chat.html" class="hover:text-primary-custom transition">Chat</a>
+            <a href="about.html" class="hover:text-primary-custom transition">About</a>
+        </div>
+
+        <div class="flex space-x-4">
+            <a href="auth.html" class="text-primary-custom px-6 py-2 rounded-lg font-bold border-b-2 border-primary-custom">Login</a>
+            <a href="auth.html" class="px-6 py-2 rounded-lg font-semibold text-white bg-primary-custom hover:opacity-90 transition shadow-lg shadow-indigo-200">Signup</a>
+        </div>
+    </nav>
+
+    <main class="max-w-md mx-auto px-4 pb-20 mt-10">
+        <!-- Auth Card -->
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100" data-aos="zoom-in">
+            <!-- Card Header / Tabs -->
+            <div class="flex border-b border-gray-100">
+                <button id="loginTab" class="flex-1 py-6 font-bold text-lg text-primary-custom border-b-4 border-primary-custom transition">Login</button>
+                <button id="signupTab" class="flex-1 py-6 font-bold text-lg text-gray-400 hover:text-slate-600 transition">Signup</button>
+            </div>
+
+            <div class="p-8">
+                <!-- Login Form -->
+                <div id="loginForm" class="space-y-6">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-bold text-slate-800">Welcome Back</h2>
+                        <p class="text-gray-500 text-sm">Dobara dekh ke khushi hui!</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                        <input type="email" placeholder="Email address" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="block text-sm font-bold text-gray-700">Password</label>
+                            <a href="#" class="text-xs text-primary-custom font-medium">Forgot?</a>
+                        </div>
+                        <input type="password" placeholder="Password" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                    </div>
+                    <a href="dashboard.html" class="block w-full py-4 bg-primary-custom text-white text-center font-bold rounded-xl shadow-lg shadow-indigo-100 hover:opacity-90 transition">
+                        Sign In
+                    </a>
+                    <div class="relative flex items-center justify-center py-2">
+                        <div class="flex-grow border-t border-gray-100"></div>
+                        <span class="px-4 text-gray-400 text-xs font-medium uppercase tracking-widest">OR</span>
+                        <div class="flex-grow border-t border-gray-100"></div>
+                    </div>
+                    <button class="w-full py-4 bg-white border border-gray-200 text-slate-700 font-bold rounded-xl hover:bg-gray-50 transition flex items-center justify-center space-x-3">
+                        <img src="https://www.svgrepo.com/show/355037/google.svg" class="w-5 h-5" alt="Google">
+                        <span>Continue with Google</span>
+                    </button>
+                </div>
+
+                <!-- Signup Form (Hidden by default) -->
+                <div id="signupForm" class="space-y-6 hidden">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-bold text-slate-800">Create Account</h2>
+                        <p class="text-gray-500 text-sm">Join the community. Free hai!</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
+                        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Email address</label>
+                        <input type="email" placeholder="Email address" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Password</label>
+                        <input type="password" placeholder="Password" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                    </div>
+                    <a href="dashboard.html" class="block w-full py-4 bg-indigo-600 text-white text-center font-bold rounded-xl shadow-lg shadow-indigo-100 hover:opacity-90 transition">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const loginTab = document.getElementById('loginTab');
+        const signupTab = document.getElementById('signupTab');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('text-primary-custom', 'border-primary-custom');
+            loginTab.classList.remove('text-gray-400');
+            signupTab.classList.remove('text-primary-custom', 'border-primary-custom');
+            signupTab.classList.add('text-gray-400');
+            loginForm.classList.remove('hidden');
+            signupForm.classList.add('hidden');
+        });
+
+        signupTab.addEventListener('click', () => {
+            signupTab.classList.add('text-primary-custom', 'border-primary-custom');
+            signupTab.classList.remove('text-gray-400');
+            loginTab.classList.remove('text-primary-custom', 'border-primary-custom');
+            loginTab.classList.add('text-gray-400');
+            signupForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
