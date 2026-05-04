@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/hero.png" alt="NoteShare Hero" width="100%" style="border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+  <img src="assets/hero.png" alt="NoteShare Hero" width="100%">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 ## 🔴 The Problem & ✅ The Solution
 
 <p align="center">
-  <img src="assets/problem-solution.png" alt="Problem and Solution" width="85%" style="border-radius: 15px;">
+  <img src="assets/problem-solution.png" alt="Problem and Solution" width="85%">
 </p>
 
 <div align="center">
@@ -70,21 +70,21 @@
     <tr>
       <td width="50%">
         <h4 align="center">📊 Dashboard</h4>
-        <img src="assets/dashboard.png" width="100%" style="border-radius: 10px;">
+        <img src="assets/dashboard.png" width="100%">
       </td>
       <td width="50%">
         <h4 align="center">✨ Features</h4>
-        <img src="assets/features.png" width="100%" style="border-radius: 10px;">
+        <img src="assets/features.png" width="100%">
       </td>
     </tr>
     <tr>
       <td width="50%">
         <h4 align="center">🤝 Friends</h4>
-        <img src="assets/friends.png" width="100%" style="border-radius: 10px;">
+        <img src="assets/friends.png" width="100%">
       </td>
       <td width="50%">
         <h4 align="center">💬 Chat</h4>
-        <img src="assets/chat.png" width="100%" style="border-radius: 10px;">
+        <img src="assets/chat.png" width="100%">
       </td>
     </tr>
   </table>
@@ -143,7 +143,7 @@ index.html
 ## 👨‍💻 Meet the Creator
 
 <p align="center">
-  <img src="assets/creator.png" alt="Meet the Creator" width="70%" style="border-radius: 20px;">
+  <img src="assets/creator.png" alt="Meet the Creator" width="70%">
 </p>
 
 <p align="center">
