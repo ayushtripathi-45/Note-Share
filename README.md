@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=45&pause=1000&color=6366F1&center=true&vCenter=true&width=800&height=100&lines=🚀+Welcome+to+NoteShare;📚+Modern+Resource+Sharing;💬+Real-time+Student+Social+Network;✨+Empowering+Learning+Together" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=45&pause=1000&color=6366F1&center=true&vCenter=true&width=800&height=100&lines=%F0%9F%9A%80+Welcome+to+NoteShare;%F0%9F%93%9A+Modern+Resource+Sharing;%F0%9F%92%AC+Real-time+Student+Social+Network;%E2%9C%A8+Empowering+Learning+Together" alt="Typing SVG" />
 </p>
 
 <p align="center">
