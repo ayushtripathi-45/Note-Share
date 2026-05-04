@@ -114,11 +114,11 @@
 ## 🚀 Future Roadmap
 
 ```mermaid
-graph LR
-    A[Frontend Prototype] --> B[Backend Integration]
-    B --> C[Real-time Engine]
-    C --> D[AI Layer]
-    D --> E[Full Scale App]
+flowchart LR
+    A["Frontend Prototype"] --> B["Backend Integration"]
+    B --> C["Real-time Engine"]
+    C --> D["AI Layer"]
+    D --> E["Full Scale App"]
     style A fill:#6366f1,stroke:#fff,stroke-width:2px,color:#fff
     style E fill:#a855f7,stroke:#fff,stroke-width:2px,color:#fff
 ```
