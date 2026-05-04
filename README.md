@@ -24,7 +24,7 @@
 ---
 
 ## 🌟 Overview
-**NoteShare** is a premium, high-fidelity platform designed to revolutionize academic collaboration. It bridges the gap between static resource storage and dynamic social interaction, creating a seamless ecosystem for students to thrive.
+**NoteShare** is a premium, high-fidelity **frontend-only** prototype designed to revolutionize academic collaboration. This repository showcases the complete UI/UX for a modern resource-sharing ecosystem, featuring interactive dashboards and social components built with a "frontend-first" approach.
 
 > [!TIP]
 > **Pro Tip:** NoteShare isn't just a drive—it's a community. Use the real-time chat to clarify doubts while browsing shared notes!
