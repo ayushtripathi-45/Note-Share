@@ -6,7 +6,9 @@
     <title>Login / Signup - NoteShare</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         body { font-family: 'Outfit', sans-serif; }
         .bg-primary-custom { background-color: #6366f1; }
@@ -25,14 +27,16 @@
         </div>
         
         <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
-            <a href="dashboard.html" class="hover:text-primary-custom transition">Dashboard</a>
             <a href="index.html#features" class="hover:text-primary-custom transition">Explore</a>
-            <a href="friends.html" class="hover:text-primary-custom transition">Friends</a>
-            <a href="chat.html" class="hover:text-primary-custom transition">Chat</a>
             <a href="about.html" class="hover:text-primary-custom transition">About</a>
         </div>
+        <div id="authNavLinks" class="hidden md:flex space-x-8 text-gray-600 font-medium">
+            <a href="dashboard.html" class="hover:text-primary-custom transition">Dashboard</a>
+            <a href="friends.html" class="hover:text-primary-custom transition">Friends</a>
+            <a href="chat.html" class="hover:text-primary-custom transition">Chat</a>
+        </div>
 
-        <div class="flex space-x-4">
+        <div id="nav-auth-section" class="flex space-x-4">
             <a href="auth.html" class="text-primary-custom px-6 py-2 rounded-lg font-bold border-b-2 border-primary-custom">Login</a>
             <a href="auth.html" class="px-6 py-2 rounded-lg font-semibold text-white bg-primary-custom hover:opacity-90 transition shadow-lg shadow-indigo-200">Signup</a>
         </div>
@@ -55,25 +59,31 @@
                         <p class="text-gray-500 text-sm">Dobara dekh ke khushi hui!</p>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">Email</label>
-                        <input type="email" placeholder="Email address" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Email / Friend ID</label>
+                        <input type="text" id="loginEmail" placeholder="Email or Friend ID" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30" value="demouser@test.com">
                     </div>
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <label class="block text-sm font-bold text-gray-700">Password</label>
                             <a href="#" class="text-xs text-primary-custom font-medium">Forgot?</a>
                         </div>
-                        <input type="password" placeholder="Password" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                        <input type="password" id="loginPassword" placeholder="Password" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30" value="11223">
                     </div>
-                    <a href="dashboard.html" class="block w-full py-4 bg-primary-custom text-white text-center font-bold rounded-xl shadow-lg shadow-indigo-100 hover:opacity-90 transition">
+                    <button id="loginSubmitBtn" class="block w-full py-4 bg-primary-custom text-white text-center font-bold rounded-xl shadow-lg shadow-indigo-100 hover:opacity-90 transition">
                         Sign In
-                    </a>
+                    </button>
+                    <div class="mt-4 rounded-3xl border border-indigo-100 bg-indigo-50/80 p-4 text-sm text-slate-700">
+                        <p class="font-semibold text-slate-800 mb-2">Try the app with a demo account</p>
+                        <p class="mb-1"><span class="font-medium">Email / Friend ID:</span> <span class="font-semibold">demouser@test.com</span></p>
+                        <p class="mb-2"><span class="font-medium">Password:</span> <span class="font-semibold">11223</span></p>
+                        <p class="text-xs text-slate-500">Friends may log in with their Friend ID and password directly. Admin: AYX-ADMIN-001 / Ayush@2026</p>
+                    </div>
                     <div class="relative flex items-center justify-center py-2">
                         <div class="flex-grow border-t border-gray-100"></div>
                         <span class="px-4 text-gray-400 text-xs font-medium uppercase tracking-widest">OR</span>
                         <div class="flex-grow border-t border-gray-100"></div>
                     </div>
-                    <button class="w-full py-4 bg-white border border-gray-200 text-slate-700 font-bold rounded-xl hover:bg-gray-50 transition flex items-center justify-center space-x-3">
+                    <button id="googleAuthBtn" class="w-full py-4 bg-white border border-gray-200 text-slate-700 font-bold rounded-xl hover:bg-gray-50 transition flex items-center justify-center space-x-3">
                         <img src="https://www.svgrepo.com/show/355037/google.svg" class="w-5 h-5" alt="Google">
                         <span>Continue with Google</span>
                     </button>
@@ -87,19 +97,19 @@
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
-                        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                        <input type="text" id="signupName" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Email address</label>
-                        <input type="email" placeholder="Email address" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                        <input type="email" id="signupEmail" placeholder="Email address" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Password</label>
-                        <input type="password" placeholder="Password" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                        <input type="password" id="signupPassword" placeholder="Password" class="w-full px-4 py-3 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
                     </div>
-                    <a href="dashboard.html" class="block w-full py-4 bg-indigo-600 text-white text-center font-bold rounded-xl shadow-lg shadow-indigo-100 hover:opacity-90 transition">
+                    <button id="signupSubmitBtn" class="block w-full py-4 bg-indigo-600 text-white text-center font-bold rounded-xl shadow-lg shadow-indigo-100 hover:opacity-90 transition">
                         Get Started
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>

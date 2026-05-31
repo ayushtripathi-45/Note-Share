@@ -32,7 +32,8 @@
 ---
 
 > [!IMPORTANT]
-> **Project Status:** This repository currently hosts the **Frontend Prototype**. Core backend services (Node.js, MongoDB, Socket.io) and AI features are currently in the development pipeline.
+> **Project Status:** This repository now includes a **Node.js + MySQL backend prototype** for auth and note storage. Backend APIs power login, registration, note upload, note editing, and session-based access control.
+
 
 ---
 
@@ -139,9 +140,19 @@ git clone https://github.com/ayushtripathi-45/Note-Share.git
 # Navigate to the folder
 cd Note-Share
 
-# Open in your browser (or use Live Server)
-index.html
+# Install backend dependencies
+npm install
+
+# Copy the example env file and edit MySQL credentials
+cp .env.example .env
+
+# Start the server
+npm start
 ```
+
+Then open `http://localhost:3000` in your browser.
+
+> Note: The backend uses MySQL for user auth and note storage. Create the database or let the server create it automatically using the credentials in `.env`.
 
 ---
 

@@ -6,7 +6,9 @@
     <title>Friends - NoteShare</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         body { font-family: 'Outfit', sans-serif; }
         .bg-primary-custom { background-color: #6366f1; }
@@ -32,10 +34,7 @@
             <a href="about.html" class="hover:text-primary-custom transition">About</a>
         </div>
 
-        <div class="flex space-x-4">
-            <a href="auth.html" class="px-6 py-2 rounded-lg font-semibold text-primary-custom hover:bg-indigo-50 transition">Login</a>
-            <a href="auth.html" class="px-6 py-2 rounded-lg font-semibold text-white bg-primary-custom hover:opacity-90 transition shadow-lg shadow-indigo-200">Signup</a>
-        </div>
+        <div id="nav-auth-section" class="flex items-center space-x-4"></div>
     </nav>
 
     <main class="max-w-5xl mx-auto px-4 pb-20">
@@ -57,8 +56,8 @@
             <div data-aos="fade-up">
                 <h3 class="text-gray-500 uppercase text-xs font-bold tracking-widest border-b border-gray-100 pb-2 mb-6">Add Friend</h3>
                 <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                    <input type="text" placeholder="Enter Friend ID (e.g. RAHUL456)" class="flex-grow px-6 py-4 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
-                    <button class="bg-primary-custom text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-indigo-100 hover:opacity-90 transition">
+                    <input type="text" id="friendSearchId" placeholder="Enter Friend ID (e.g. RAHUL456)" class="flex-grow px-6 py-4 rounded-xl border border-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50/30">
+                    <button id="addFriendBtn" class="bg-primary-custom text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-indigo-100 hover:opacity-90 transition">
                         Send Request
                     </button>
                 </div>
@@ -67,68 +66,16 @@
             <!-- Incoming Requests -->
             <div data-aos="fade-up">
                 <h3 class="text-gray-500 uppercase text-xs font-bold tracking-widest border-b border-gray-100 pb-2 mb-6">Incoming Requests</h3>
-                <div class="space-y-4">
-                    <!-- Request 1 -->
-                    <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-gray-50 shadow-sm hover:shadow-md transition">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold">A</div>
-                            <div>
-                                <p class="font-bold text-slate-800">Ankit Sharma</p>
-                                <p class="text-xs text-gray-400">ANKIT789</p>
-                            </div>
-                        </div>
-                        <div class="flex space-x-2">
-                            <button class="px-6 py-2 bg-green-500 text-white text-xs font-bold rounded-full hover:opacity-90">Accept</button>
-                            <button class="px-6 py-2 bg-red-400 text-white text-xs font-bold rounded-full hover:opacity-90">Reject</button>
-                        </div>
-                    </div>
-                    <!-- Request 2 -->
-                    <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-gray-50 shadow-sm hover:shadow-md transition">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold">P</div>
-                            <div>
-                                <p class="font-bold text-slate-800">Priya Mishra</p>
-                                <p class="text-xs text-gray-400">PRIYA234</p>
-                            </div>
-                        </div>
-                        <div class="flex space-x-2">
-                            <button class="px-6 py-2 bg-green-500 text-white text-xs font-bold rounded-full hover:opacity-90">Accept</button>
-                            <button class="px-6 py-2 bg-red-400 text-white text-xs font-bold rounded-full hover:opacity-90">Reject</button>
-                        </div>
-                    </div>
+                <div id="incomingRequestsContainer" class="space-y-4">
+                    <!-- Dynamic Requests content -->
                 </div>
             </div>
 
             <!-- Friends List -->
             <div data-aos="fade-up">
                 <h3 class="text-gray-500 uppercase text-xs font-bold tracking-widest border-b border-gray-100 pb-2 mb-6">Friends List</h3>
-                <div class="space-y-4">
-                    <!-- Friend 1 -->
-                    <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-gray-50 shadow-sm hover:shadow-md transition">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold">R</div>
-                            <div>
-                                <p class="font-bold text-slate-800">Rahul Verma</p>
-                                <p class="text-xs text-gray-400">RAHUL456 • 8 notes shared</p>
-                            </div>
-                        </div>
-                        <button class="px-8 py-2 border-2 border-primary-custom text-primary-custom text-xs font-bold rounded-full hover:bg-indigo-50 transition">
-                            View Notes
-                        </button>
-                    </div>
-                    <!-- Friend 2 -->
-                    <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-gray-50 shadow-sm hover:shadow-md transition">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold">A</div>
-                            <div>
-                                <p class="font-bold text-slate-800">Aman Gupta</p>
-                                <p class="text-xs text-gray-400">AMAN101 • 3 notes shared</p>
-                            </div>
-                        </div>
-                        <button class="px-8 py-2 border-2 border-primary-custom text-primary-custom text-xs font-bold rounded-full hover:bg-indigo-50 transition">
-                            View Notes
-                        </button>
-                    </div>
+                <div id="friendsListContainer" class="space-y-4">
+                    <!-- Dynamic Friends list content -->
                 </div>
             </div>
 
