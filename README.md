@@ -5,7 +5,7 @@
 <p align="center">
   <img src="assets/hero.png" alt="NoteShare Hero" width="100%">
 </p>
-
+ 
 <p align="center">
   <a href="https://github.com/ayushtripathi-45/Note-Share">
     <img src="https://img.shields.io/github/stars/ayushtripathi-45/Note-Share?style=for-the-badge&color=6366f1&logo=github" alt="Stars">
